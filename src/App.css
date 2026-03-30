@@ -1,57 +1,26 @@
-/* Global */
-
 html, body, #root {
   height: 100%;
   margin: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-}
-
 .layout {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
 }
-
-/* Header */
 
 .header {
-  background-image: url('Header.png');
+  height: 155px;
+  flex-shrink: 0;
+  background-image: url("Header.png");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  overflow: hidden;
 }
-
-/* Footer */
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #222;
-  color: white;
-  text-align: right;
-  padding: 8px 0;
-  flex-shrink: 0;
-}
-
-/* Pages */
 
 .pages {
   flex: 1;
-  overflow-y: scroll;
+  overflow-y: y;
   background-color: #f6eec9;
-  padding-bottom: 60px
 }

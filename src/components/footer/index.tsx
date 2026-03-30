@@ -5,9 +5,6 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div>
-        <a href="/login">Part of the band?</a>
-      </div>
     </div>
   );
 }
