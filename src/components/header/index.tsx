@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 
 function Header() {
@@ -9,18 +9,18 @@ function Header() {
     <div className="header">
       <img src="/images/Logo.png" alt="Cryptid Crossing Logo" />
       <nav className="folder-tabs">
-        <a
-          href="/shows"
+        <Link
+          to="/shows"
           className={`tab ${path.startsWith("/shows") ? "" : "active"}`}
         >
           Shows
-        </a>
-        <a
-          href="/development"
+        </Link>
+        <Link
+          to="/development"
           className={`tab ${path.startsWith("/development") ? "" : "active"}`}
         >
           Development
-        </a>
+        </Link>
       </nav>
     </div>
   );

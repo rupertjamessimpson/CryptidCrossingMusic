@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 
 import Header from "./components/header";
+import Footer from "./components/footer";
 import Shows from "./components/pages/shows";
 import Login from "./components/pages/login";
 
@@ -19,6 +20,9 @@ function App() {
             <Route path="/shows" element={<Shows />} />
             <Route path="/login" element={<Login />} />
           </Routes>
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
