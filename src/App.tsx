@@ -14,7 +14,7 @@ function App() {
         <div className="header">
           <Header />
         </div>
-        <div className="pages">
+        <div className="page">
           <Routes>
             <Route path="/" element={<Navigate to="/shows" />} />
             <Route path="/shows" element={<Shows />} />

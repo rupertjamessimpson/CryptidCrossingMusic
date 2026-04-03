@@ -1,17 +1,20 @@
 html, body, #root {
   height: 100%;
   margin: 0;
+  background-color: #f6eec9;
 }
 
 .layout {
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .header {
   height: 155px;
-  flex-shrink: 0;
+  flex: 0 0 155px;
   background-image: url("Header.png");
   background-size: cover;
   background-position: left center;
@@ -19,8 +22,14 @@ html, body, #root {
   overflow: hidden;
 }
 
-.pages {
-  flex: 1;
-  overflow-y: y;
+.page {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
   background-color: #f6eec9;
+}
+
+.footer {
+  height: 110px;
+  flex: 0 0 110px;
 }
