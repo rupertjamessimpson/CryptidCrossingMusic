@@ -1,7 +1,7 @@
 html, body, #root {
   height: 100%;
   margin: 0;
-  background-color: #f6eec9;
+  background-color: #111;
 }
 
 .layout {
@@ -10,6 +10,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: #f6eec9;
 }
 
 .header {
