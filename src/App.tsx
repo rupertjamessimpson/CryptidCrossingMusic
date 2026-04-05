@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 
 import Header from "./components/header";
-import Footer from "./components/footer";
-import Shows from "./components/pages/shows";
-import Login from "./components/pages/login";
+// import Footer from "./components/footer";
+import Album from "./components/pages/album";
+import About from "./components/pages/about";
 
 
 function App() {
@@ -16,14 +16,14 @@ function App() {
         </div>
         <div className="page">
           <Routes>
-            <Route path="/" element={<Navigate to="/shows" />} />
-            <Route path="/shows" element={<Shows />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Navigate to="/album" />} />
+            <Route path="/album" element={<Album />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
-        <div className="footer">
+        {/* <div className="footer">
           <Footer />
-        </div>
+        </div> */}
       </div>
     </BrowserRouter>
   );

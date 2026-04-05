@@ -1,0 +1,17 @@
+.album {
+  padding: 30px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.tracks {
+  text-align: left;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .album {
+    text-align: center;
+    padding: 50px;
+  }
+}
