@@ -29,7 +29,6 @@ function Album() {
   return (
     <div className="album">
       <img src="/images/AlbumArt.png" alt="Album Art" height="220" width="220"/>
-      <p><b>Listen on <a href="https://soundcloud.com/cryptid-crossing/sets/cryptid-crossing" >SoundCloud</a></b></p>
       <p><b>Listen on <a href="https://www.youtube.com/watch?v=t9BHY-le5tI&list=PLu-AFnJxgQ6Faslw7BFjvbaJY8UFfP5wJ" >YouTube</a></b></p>
       <br/>
 
@@ -38,8 +37,7 @@ function Album() {
         <audio controls>
           <source src="/music/Rose Tint.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>
@@ -48,8 +46,7 @@ function Album() {
         <audio controls>
           <source src="/music/Sand Castle.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>
@@ -58,8 +55,7 @@ function Album() {
         <audio controls>
           <source src="/music/Manemsha.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>
@@ -68,7 +64,7 @@ function Album() {
         <audio controls>
           <source src="/music/Lilitht.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals:</u> Written and performed by Rupert Simpson</p>
         <p><u>Guitar:</u> Written by Rupert Simpson, performed by Andrew Frazier</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
@@ -78,8 +74,7 @@ function Album() {
         <audio controls>
           <source src="/music/Quindecim.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>
@@ -88,8 +83,7 @@ function Album() {
         <audio controls>
           <source src="/music/Ghost.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>
@@ -98,8 +92,7 @@ function Album() {
         <audio controls>
           <source src="/music/Wardrobe.mp3"/>
         </audio>
-        <p><u>Lyrics:</u> Written and performed by Rupert Simpson</p>
-        <p><u>Guitar:</u> Written and performed by Rupert Simpson</p>
+        <p><u>Vocals & Guitar:</u> Written and performed by Rupert Simpson</p>
         <p><u>Drums:</u> Written and performed by Travis Bissel</p>
         <p><u>Bass:</u> Written by Conner White, performed by Dennis McCullough</p>
         <br/>

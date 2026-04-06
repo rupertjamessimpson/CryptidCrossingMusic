@@ -10,7 +10,7 @@ function About() {
       <p>I'm Rupert, the songwriter for Cryptid Crossing and the developer of this site.</p>
 
       <p>
-        Cryptid Crossing is a five piece rock band located in Massachusetts. Our band was made 
+        Cryptid Crossing is a five piece rock band located in Massachusetts. Our band was formed 
         in 2016 from a group of friends who play music together. I write songs about my life, 
         and lean on my bandmates to add rhythm and energy to my stories.
       </p>
@@ -19,9 +19,11 @@ function About() {
       <br/>
 
       <p><b>Socials</b></p>
+      <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
+      <br/>
+      <br/>
       <a href="https://www.instagram.com/cryptidcrossingmusic/">Instagram</a>
       <br/>
-      <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
       <br/>
       <a href="https://soundcloud.com/cryptid-crossing">SoundCloud</a>
     </div>

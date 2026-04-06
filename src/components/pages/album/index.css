@@ -4,6 +4,14 @@
   font-size: 15px;
 }
 
+img {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+a {
+  color: rgba(145, 35, 28);
+}
+
 .tracks {
   text-align: left;
 }
@@ -12,6 +20,6 @@
 @media (max-width: 768px) {
   .album {
     text-align: center;
-    padding: 50px;
+    padding: 30px;
   }
 }
