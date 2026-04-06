@@ -7,12 +7,12 @@ function About() {
     <div className="about">
       <h3>Thank you for visiting our webpage!</h3>
 
-      <p>My name is Rupert, and I am the songwriter for Cryptid Crossing and the developer of this site.</p>
+      <p>I'm Rupert, the songwriter for Cryptid Crossing and the developer of this site.</p>
 
       <p>
-        We're a five piece rock band in MA, formed from a group of friends
-        who have played music together for the past decade. I write songs to tell stories about
-        my life, and lean on my bandmates to add rhythm and energy to my stories.
+        Cryptid Crossing is a five piece rock band located in Massachusetts. Our band was made 
+        in 2016 from a group of friends who play music together. I write songs about my life, 
+        and lean on my bandmates to add rhythm and energy to my stories.
       </p>
 
       <p>Contact us at <u>CryptidCrossingMusic@gmail.com</u></p>
