@@ -4,20 +4,85 @@
   font-size: 15px;
 }
 
-img {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+.album p {
+  margin: 0;
+  padding-bottom: 7px;
 }
 
-a {
-  color: rgba(145, 35, 28);
+.album-img {
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.album-img:active {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+  filter: brightness(1.05);
 }
 
 .tracks {
   text-align: left;
 }
 
-/* Mobile override */
-@media (max-width: 768px) {
+.track-name {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.track-play-row {
+  all: unset;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #870002;
+}
+
+.play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #870002;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+
+  font-size: 18px;
+  color: #870002;
+
+  box-shadow: 0 2px 0 #500001;
+
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.track-play-row:active .play-icon {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #500001;
+}
+
+.track-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #870002;
+}
+
+.track-play-row:active .play-icon {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #500001;
+}
+
+.bottom-padding {
+  height: 50px;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
   .album {
     text-align: center;
     padding: 30px;

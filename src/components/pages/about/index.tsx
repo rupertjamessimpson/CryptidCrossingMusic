@@ -19,13 +19,9 @@ function About() {
       <br/>
 
       <p><b>Socials</b></p>
-      <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
-      <br/>
-      <br/>
-      <a href="https://www.instagram.com/cryptidcrossingmusic/">Instagram</a>
-      <br/>
-      <br/>
-      <a href="https://soundcloud.com/cryptid-crossing">SoundCloud</a>
+      <a href="https://www.youtube.com/@CryptidCrossingMusic" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <br/><br/>
+      <a href="https://www.instagram.com/cryptidcrossingmusic/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
   );
 }

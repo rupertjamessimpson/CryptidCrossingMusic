@@ -24,3 +24,11 @@
 .tab.active {
   background-color: #e5dbb5;
 }
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .folder-tabs {
+    text-align: center;
+  }
+}
