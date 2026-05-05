@@ -26,6 +26,12 @@
   border-radius: 5px 5px 0 0;
 }
 
+.audio-player button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
 .audio-player-ui {
   width: 100%;
   height: 60px;
