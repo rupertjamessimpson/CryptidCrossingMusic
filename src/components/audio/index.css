@@ -37,6 +37,7 @@
 .display-labels {
   display: flex;
   flex-direction: column;
+  width: 135px;
 }
 
 .display-labels span {

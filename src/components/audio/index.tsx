@@ -13,8 +13,8 @@ function Audio({ audioRequest }: AudioProps) {
   const [currentTrack, setCurrentTrack] = useState<string>("1. Sand Castle");
   const [isPaused, setPause] = useState(false);
   const [active, setActive] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  // const [currentTime, setCurrentTime] = useState(0);
+  // const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     if (!audioRequest) return;
@@ -29,7 +29,7 @@ function Audio({ audioRequest }: AudioProps) {
 
     const updateTime = () => {
       if (!audioRef.current) return;
-      setCurrentTime(audioRef.current.currentTime);
+      // setCurrentTime(audioRef.current.currentTime);
     };
 
     updateTime();
@@ -51,7 +51,7 @@ function Audio({ audioRequest }: AudioProps) {
     setCurrentAlbum(albumTitle);
     setPause(false);
     setActive(true);
-    setCurrentTime(0);
+    // setCurrentTime(0);
   };
 
   const pause = () => {
@@ -106,21 +106,21 @@ function Audio({ audioRequest }: AudioProps) {
     audioRef.current.pause();
     audioRef.current.currentTime = 0;
 
-    setCurrentTime(0);
+    // setCurrentTime(0);
     setPause(true);
     setActive(false);
   };
 
-  const formatTime = (time: number) => {
-    if (!isFinite(time)) return "0:00";
+  // const formatTime = (time: number) => {
+  //   if (!isFinite(time)) return "0:00";
 
-    const rounded = Math.floor(time + 0.5);
+  //   const rounded = Math.floor(time + 0.5);
 
-    const minutes = Math.floor(rounded / 60);
-    const seconds = rounded % 60;
+  //   const minutes = Math.floor(rounded / 60);
+  //   const seconds = rounded % 60;
 
-    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-  };
+  //   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  // };
 
   return (
     <div className={active ? "audio-player-container" : "audio-player-container-inactive"}>
@@ -128,7 +128,7 @@ function Audio({ audioRequest }: AudioProps) {
         ref={audioRef}
         onLoadedMetadata={() => {
           if (!audioRef.current) return;
-          setDuration(audioRef.current.duration);
+          // setDuration(audioRef.current.duration);
         }}
         onEnded={skipForwards}
       />
