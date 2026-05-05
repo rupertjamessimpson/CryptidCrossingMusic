@@ -40,10 +40,11 @@ function Audio({ audioRequest }: AudioProps) {
   }, [isPaused, active, currentTrack]);
 
   const play = (audioPath: string) => {
-    if (!audioRef.current) return;
+    const audio = audioRef.current;
+    if (!audio) return;
 
-    audioRef.current.src = `/music/${audioPath}.mp3`;
-    audioRef.current.play();
+    audio.src = `/music/${audioPath}.mp3`;
+    audio.play().catch(() => {});
 
     const [albumTitle, songTitle] = audioPath.split("/");
     setCurrentTrack(songTitle);
@@ -75,8 +76,10 @@ function Audio({ audioRequest }: AudioProps) {
       const currentIndex = cryptidCrossing.indexOf(currentTrack);
       if (currentIndex === -1) return;
 
-      const nextSong = cryptidCrossing[currentIndex + 1];
-      if (!nextSong) return;
+      let nextSong = cryptidCrossing[currentIndex + 1];
+      if (!nextSong) {
+        nextSong = cryptidCrossing[0];
+      };
 
       play(`${currentAlbum}/${nextSong}`);
     }
@@ -127,19 +130,15 @@ function Audio({ audioRequest }: AudioProps) {
           if (!audioRef.current) return;
           setDuration(audioRef.current.duration);
         }}
+        onEnded={skipForwards}
       />
       <div className="audio-player" >
        <div className="audio-player-ui">
+        <img src="/images/AlbumArt.png" alt="album-art"/>
         <div className="track-info">
           <div className="display-labels">
-            <p>Track</p>
-            <p>Time</p>
-          </div>
-          <div className="track-info-screen">
-            <div className="track-info-screen-values">
-              <p>{`${currentTrack}`}</p>
-              <p>{formatTime(currentTime)} / {formatTime(duration)}</p>
-            </div>
+            <span className="track-name">{`${currentTrack}`}</span>
+            <span className="album-name">Cryptid Crossing</span>
           </div>
         </div>
         <div className="buttons">
@@ -147,13 +146,13 @@ function Audio({ audioRequest }: AudioProps) {
               resume();
             } else {
               pause();
-          }}}>▶ ⏸</button>
+          }}}><img src="/images/play.svg" alt="play-button"/></button>
           <div className="skip-stop-button-container">
             <div className="skip-buttons-container">
-              <button className="skip-button" onClick={() => skipBackwards()}>⏮</button>
-              <button className="skip-button" onClick={() => skipForwards()}>⏭</button>
+              <button className="skip-button" onClick={() => skipBackwards()}><img src="/images/previous.svg" alt="previous-button"/></button>
+              <button className="skip-button" onClick={() => skipForwards()}><img src="/images/next.svg" alt="next-button"/></button>
             </div>
-            <button className="stop-button" onClick={() => stop()}>⏹</button>
+            <button className="stop-button" onClick={() => stop()}><img src="/images/pause.svg" alt="pause-button"/></button>
           </div>
         </div>
        </div>

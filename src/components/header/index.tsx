@@ -10,19 +10,14 @@ function Header() {
       <div className="header">
         <img src="/images/Logo.png" alt="Cryptid Crossing Logo" />
         <nav className="folder-tabs">
-          <Link
-            to="/album"
-            className={`tab ${path.startsWith("/album") ? "" : "active"}`}
-          >
-            Album
+          <Link to="/album" className={`tab ${path.startsWith("/album") ? "" : "active"}`}>
+            <span className="tab-text">Album</span>
           </Link>
-          <Link
-            to="/about"
-            className={`tab ${path.startsWith("/about") ? "" : "active"}`}
-          >
-            About
+          <Link to="/about" className={`tab ${path.startsWith("/about") ? "" : "active"}`}>
+            <span className="tab-text">About</span>
           </Link>
         </nav>
+        <div className="folder-top"/>
       </div>
     </div>
   );

@@ -18,8 +18,7 @@
 
 .audio-player {
   background-color: #1a1819;
-  padding-left: 8px;
-  padding-right: 5px;
+  padding-left: 10px;
   width: 100%;
   height: 75px;
   display: flex;
@@ -32,52 +31,37 @@
   height: 60px;
   display: flex;
   gap: 5px;
+  padding-left: 10px;
 }
 
 .display-labels {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.display-labels p {
+.display-labels span {
+  padding-left: 10px;
+}
+
+.track-name {
+  color: #d1ccd0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.album-name {
   color: #a39ca2;
-  margin: 0;
   font-size: 12px;
 }
 
 .track-info {
-  background-color: #514a57;
-  height: 60px;
-  width: 200px;
   display: flex;
-
   align-items: center;
-  justify-content: space-evenly;
-  border-radius: 3px;
 }
 
-.track-info-screen {
-  padding-left: 10px;
-  background-color: #524e4b;
-  width: 135px;
-  height: 50px;
-
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-}
-
-.track-info-screen-values {
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.track-info-screen-values p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 15px;
-  margin: 0;
+button {
+  all: unset;
+  cursor: pointer;
 }
 
 .buttons {
@@ -106,7 +90,6 @@
 
   width: 60px;
   height: 60px;
-  background-color: #a0a4a3;
 
   display: flex;
   align-items: center;
@@ -116,9 +99,8 @@
 .skip-button {
   cursor: pointer;
 
-  width: 25px;
+  width: 30px;
   height: 30px;
-  background-color: #a0a4a3;
 
   display: flex;
   align-items: center;
@@ -130,22 +112,27 @@
 
   width: 100%;
   height: 30px;
-  background-color: #a0a4a3;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.stop-button img {
+  width: 20px;
+}
+
 /* Mobile */
 
 @media (max-width: 480px) {
   .audio-player {
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 0px;
+    height: 70px;
   }
 
   .audio-player-ui {
     width: auto; /* stop stretching full width */
-    justify-content: center;
+    justify-content: space-between;
   }
 }

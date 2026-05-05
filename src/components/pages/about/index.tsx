@@ -12,16 +12,17 @@ function About() {
       <p>
         Cryptid Crossing is a five piece rock band located in Massachusetts. Our band was formed 
         in 2016 from a group of friends who play music together. I write songs about my life, 
-        and lean on my bandmates to add rhythm and energy to my stories.
+        and lean on my bandmates to add rhythm and energy to those stories.
       </p>
 
       <p>Contact us at <u>CryptidCrossingMusic@gmail.com</u></p>
       <br/>
 
       <p><b>Socials</b></p>
-      <a href="https://www.youtube.com/@CryptidCrossingMusic" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
       <br/><br/>
-      <a href="https://www.instagram.com/cryptidcrossingmusic/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.instagram.com/cryptidcrossingmusic/">Instagram</a>
+      <div className="bottom-padding"/>
     </div>
   );
 }
