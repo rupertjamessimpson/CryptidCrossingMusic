@@ -7,10 +7,10 @@ type AudioProps = {
 
 function Audio({ audioRequest }: AudioProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const cryptidCrossing = ["1. Rose Tint", "2. Sand Castle", "3. Manemsha", "4. Lilith", "5. Quindecim", "6. Ghost", "7. Wardrobe"];
+  const cryptidCrossing = ["Rose Tint", "Sand Castle", "Manemsha", "Lilith", "Quindecim", "Ghost", "Wardrobe"];
 
   const [currentAlbum, setCurrentAlbum] = useState<string>("cryptid_crossing")
-  const [currentTrack, setCurrentTrack] = useState<string>("1. Sand Castle");
+  const [currentTrack, setCurrentTrack] = useState<string>("Sand Castle");
   const [isPaused, setPause] = useState(false);
   const [active, setActive] = useState(false);
   // const [currentTime, setCurrentTime] = useState(0);

@@ -16,7 +16,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/1. Rose Tint?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Rose Tint?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">1. Rose Tint</span>
           </button>
@@ -29,7 +29,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/2. Sand Castle?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Sand Castle?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">2. Sand Castle</span>
           </button>
@@ -42,7 +42,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/3. Manemsha?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Manemsha?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">3. Manemsha</span>
           </button>
@@ -55,7 +55,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/4. Lilith?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Lilith?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">4. Lilith</span>
           </button>
@@ -69,7 +69,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/5. Quindecim?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Quindecim?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">5. Quindecim</span>
           </button>
@@ -82,7 +82,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/6. Ghost?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Ghost?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">6. Ghost</span>
           </button>
@@ -95,7 +95,7 @@ function Album({ setAudioRequest }: AlbumProps) {
         <div className="track-name">
           <button
             className="track-play-row"
-            onClick={() => setAudioRequest(`cryptid_crossing/7. Wardrobe?${Date.now()}`)}>
+            onClick={() => setAudioRequest(`cryptid_crossing/Wardrobe?${Date.now()}`)}>
             <span className="play-icon">▶</span>
             <span className="track-title">7. Wardrobe</span>
           </button>
