@@ -9,12 +9,12 @@ function Audio({ audioRequest }: AudioProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const cryptidCrossing = ["Rose Tint", "Sand Castle", "Manemsha", "Lilith", "Quindecim", "Ghost", "Wardrobe"];
 
-  const [currentAlbum, setCurrentAlbum] = useState<string>("cryptid_crossing")
+  const [currentAlbum, setCurrentAlbum] = useState<string>("Cryptid Crossing")
   const [currentTrack, setCurrentTrack] = useState<string>("Sand Castle");
   const [isPaused, setPause] = useState(false);
   const [active, setActive] = useState(false);
-  // const [currentTime, setCurrentTime] = useState(0);
-  // const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     if (!audioRequest) return;
@@ -29,7 +29,7 @@ function Audio({ audioRequest }: AudioProps) {
 
     const updateTime = () => {
       if (!audioRef.current) return;
-      // setCurrentTime(audioRef.current.currentTime);
+      setCurrentTime(audioRef.current.currentTime);
     };
 
     updateTime();
@@ -51,7 +51,7 @@ function Audio({ audioRequest }: AudioProps) {
     setCurrentAlbum(albumTitle);
     setPause(false);
     setActive(true);
-    // setCurrentTime(0);
+    setCurrentTime(0);
   };
 
   const pause = () => {
@@ -72,7 +72,7 @@ function Audio({ audioRequest }: AudioProps) {
   const skipForwards = () => {
     if (!audioRef.current) return;
 
-    if (currentAlbum === "cryptid_crossing") {
+    if (currentAlbum === "Cryptid Crossing") {
       const currentIndex = cryptidCrossing.indexOf(currentTrack);
       if (currentIndex === -1) return;
 
@@ -89,7 +89,7 @@ function Audio({ audioRequest }: AudioProps) {
   const skipBackwards = () => {
     if (!audioRef.current) return;
 
-    if (currentAlbum === "cryptid_crossing") {
+    if (currentAlbum === "Cryptid Crossing") {
       const currentIndex = cryptidCrossing.indexOf(currentTrack);
       if (currentIndex === -1) return;
 
@@ -106,7 +106,7 @@ function Audio({ audioRequest }: AudioProps) {
     audioRef.current.pause();
     audioRef.current.currentTime = 0;
 
-    // setCurrentTime(0);
+    setCurrentTime(0);
     setPause(true);
     setActive(false);
   };
@@ -122,40 +122,83 @@ function Audio({ audioRequest }: AudioProps) {
   //   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   // };
 
+  const progressPercent = duration ? (currentTime / duration) * 100 : 0;
+
   return (
     <div className={active ? "audio-player-container" : "audio-player-container-inactive"}>
-      <audio
-        ref={audioRef}
-        onLoadedMetadata={() => {
-          if (!audioRef.current) return;
-          // setDuration(audioRef.current.duration);
-        }}
-        onEnded={skipForwards}
-      />
-      <div className="audio-player" >
-       <div className="audio-player-ui">
-        <img src="/images/AlbumArt.png" alt="album-art"/>
-        <div className="track-info">
-          <div className="display-labels">
-            <span className="track-name">{`${currentTrack}`}</span>
-            <span className="album-name">Cryptid Crossing</span>
-          </div>
-        </div>
-        <div className="buttons">
-          <button className="play-pause-button" onClick={() => {if (isPaused) {
-              resume();
-            } else {
-              pause();
-          }}}><img src="/images/play.svg" alt="play-button"/></button>
-          <div className="skip-stop-button-container">
-            <div className="skip-buttons-container">
-              <button className="skip-button" onClick={() => skipBackwards()}><img src="/images/previous.svg" alt="previous-button"/></button>
-              <button className="skip-button" onClick={() => skipForwards()}><img src="/images/next.svg" alt="next-button"/></button>
+      <div className="audio-player">
+        <audio
+          ref={audioRef}
+          onLoadedMetadata={() => {
+            if (!audioRef.current) return;
+            setDuration(audioRef.current.duration);
+          }}
+          onEnded={skipForwards}
+        />
+
+        <div className="audio-player-ui">
+          <div className="track-info">
+            <img src="/images/AlbumArt.png" alt="album-art" />
+
+            <div className="track-info-text">
+              <span className="track-info-track-name">{currentTrack}</span>
+              <span className="track-info-album-name">{currentAlbum}</span>
             </div>
-            <button className="stop-button" onClick={() => stop()}><img src="/images/pause.svg" alt="pause-button"/></button>
+          </div>
+
+          <div className="controls">
+            <div className="buttons">
+              <button className="previous-button" onClick={() => {skipBackwards()}}>
+                <img src="/images/previous.png" alt="previous-button" />
+              </button>
+
+              <button
+                className="play-button"
+                onClick={() => {
+                  if (isPaused) {
+                    resume();
+                  } else {
+                    pause();
+                  }
+                }}
+              >
+                <img
+                  src={isPaused ? "/images/play.png" : "/images/pause.png"}
+                  alt={isPaused ? "play-button" : "pause-button"}
+                />
+              </button>
+
+              <button className="next-button" onClick={() => {skipForwards()}}>
+                <img src="/images/next.png" alt="next-button" />
+              </button>
+            </div>
+
+            <div className="progress-row">
+              <input
+                type="range"
+                min="0"
+                max={duration || 0}
+                value={currentTime}
+                style={{
+                  background: `linear-gradient(to right, #ece8eb ${progressPercent}%, #5a5659 ${progressPercent}%)`
+                }}
+                onChange={(e) => {
+                  if (!audioRef.current) return;
+
+                  const newTime = Number(e.target.value);
+                  audioRef.current.currentTime = newTime;
+                  setCurrentTime(newTime);
+                }}
+              />
+            </div>
+          </div>
+
+          <div>
+            <button className="stop-button" onClick={() => {stop()}}>
+              <img src="/images/stop.png" alt="stop-button" />
+            </button>
           </div>
         </div>
-       </div>
       </div>
     </div>
   );

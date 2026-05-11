@@ -38,7 +38,6 @@
 
 .tab.active {
   background-color: #e9e1c6;
-  font-weight: 600;
 }
 
 .folder-top {
@@ -50,8 +49,6 @@
   position: relative;
   border-radius: 8px 8px 0 0;
 }
-
-/* Mobile */
 
 @media (hover: hover) and (pointer: fine) {
   .tab:hover {
