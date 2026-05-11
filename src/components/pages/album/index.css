@@ -71,6 +71,10 @@
   color: #870002;
 }
 
+.track-title:hover {
+  text-decoration: underline;
+}
+
 .track-play-row:active .play-icon {
   transform: translateY(2px);
   box-shadow: 0 0 0 #500001;
