@@ -2,6 +2,9 @@
   padding: 30px;
   text-align: left;
   font-size: 15px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .album p {
@@ -9,20 +12,40 @@
   padding-bottom: 7px;
 }
 
+.album-details {
+  max-width: 315px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-text {
+  padding-top: 10px;
+}
+
 .album-img {
+  width: 100%;
+  max-width: 315px;
+  height: auto;
   cursor: pointer;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
   transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
-.album-img:active {
-  transform: translateY(-4px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
-  filter: brightness(1.05);
+.tracks {
+  flex: 2;
+  min-width: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.tracks {
+.track {
+  flex: 1 1 190px;
+  max-width: 320px;
   text-align: left;
+  padding-right: 10px;
 }
 
 .track-name {
@@ -71,10 +94,6 @@
   color: #870002;
 }
 
-.track-title:hover {
-  text-decoration: underline;
-}
-
 .track-play-row:active .play-icon {
   transform: translateY(2px);
   box-shadow: 0 0 0 #500001;
@@ -86,9 +105,30 @@
 
 /* Mobile */
 
+@media (hover: hover) and (pointer: fine) {
+  .album-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+    filter: brightness(1.05);
+  }
+
+  .track-title:hover {
+    text-decoration: underline;
+  }
+}
+
 @media (max-width: 480px) {
   .album {
     text-align: center;
-    padding: 30px;
+    padding: 35px;
+    flex-direction: column;
+  }
+
+  .album-details {
+    align-items: flex-start;
+  }
+
+  .track {
+    padding-right: 0px;
   }
 }
