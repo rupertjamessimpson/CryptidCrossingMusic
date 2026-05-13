@@ -13,10 +13,13 @@
 }
 
 .album-details {
-  max-width: 315px;
-  flex: 1;
+  flex: 0 0 420px;
+  max-width: 420px;
+  min-width: 420px;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 30px;
 }
 
 .album-text {
@@ -25,7 +28,7 @@
 
 .album-img {
   width: 100%;
-  max-width: 315px;
+  max-width: 420px;
   height: auto;
   cursor: pointer;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
@@ -39,11 +42,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 
 .track {
-  flex: 1 1 190px;
-  max-width: 320px;
+  min-width: 270px;
   text-align: left;
   padding-right: 10px;
 }
@@ -117,7 +120,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
   .album {
     text-align: center;
     padding: 35px;
@@ -125,7 +128,18 @@
   }
 
   .album-details {
+    position: static;
+    top: auto;
     align-items: flex-start;
+    
+    flex: none;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tracks {
+    padding-bottom: 0px;
   }
 
   .track {

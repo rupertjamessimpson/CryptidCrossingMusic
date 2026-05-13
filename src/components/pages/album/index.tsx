@@ -11,22 +11,7 @@ function Album({ setAudioRequest }: AlbumProps) {
   return (
     <div className="album">
       <div className="album-details">
-        <img src="/images/AlbumArt.png" className="album-img" alt="Album Art" height="220" width="220" onClick={() => setAlbumInfoVisible(!albumInfoVisible)}/>
-        <div className="album-info">
-          {albumInfoVisible ? 
-            <div>
-              <button
-                className="track-play-row"
-                onClick={() => setAudioRequest(`Cryptid Crossing/Rose Tint?${Date.now()}`)}>
-                <span className="play-icon">▶</span>
-                <span className="track-title">Play</span>
-              </button>
-              {/* <div className="album-text">
-                <p>Clasfas</p>
-              </div> */}
-            </div>
-          : null}
-        </div>
+        <img src="/images/AlbumArt.png" className="album-img" alt="Album Art" onClick={() => setAlbumInfoVisible(!albumInfoVisible)}/>
       </div>
 
       <div className="tracks">
