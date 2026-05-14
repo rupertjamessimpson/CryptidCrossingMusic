@@ -11,10 +11,17 @@ function Audio({ audioRequest }: AudioProps) {
 
   const [currentAlbum, setCurrentAlbum] = useState<string>("Cryptid Crossing")
   const [currentTrack, setCurrentTrack] = useState<string>("Sand Castle");
-  const [isPaused, setPause] = useState(false);
-  const [active, setActive] = useState(false);
+  const [isPaused, setPause] = useState(true);
+  const [active, setActive] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    audioRef.current.src = "/music/Cryptid Crossing/Sand Castle.mp3";
+    audioRef.current.load();
+  }, []);
 
   useEffect(() => {
     if (!audioRequest) return;

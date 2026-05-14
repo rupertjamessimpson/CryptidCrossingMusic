@@ -105,11 +105,6 @@
   height: 45px;
 }
 
-.play-button img:hover {
-  width: 45px;
-  height: 45px;
-}
-
 .previous-button img {
   width: 25px;
   height: 25px;
@@ -150,6 +145,40 @@
   width: 0;
   height: 0;
   border: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .play-button img:hover {
+    transform: scale(1.05);
+  }
+
+  .play-button img:active {
+    transform: scale(1.00);
+  }
+
+  .previous-button img:hover {
+    transform: scale(1.05);
+  }
+
+  .previous-button img:active {
+    transform: scale(1.00);
+  }
+
+  .next-button img:hover {
+    transform: scale(1.05);
+  }
+
+  .next-button img:active {
+    transform: scale(1.00);
+  }
+
+  .stop-button img:hover {
+    transform: scale(1.05);
+  }
+
+  .stop-button img:active {
+    transform: scale(1.00);
+  }
 }
 
 @media (max-width: 750px) {

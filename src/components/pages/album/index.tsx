@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
 
 type AlbumProps = {
@@ -6,12 +6,11 @@ type AlbumProps = {
 };
 
 function Album({ setAudioRequest }: AlbumProps) {
-  const [albumInfoVisible, setAlbumInfoVisible] = useState(false);
 
   return (
     <div className="album">
       <div className="album-details">
-        <img src="/images/AlbumArt.png" className="album-img" alt="Album Art" onClick={() => setAlbumInfoVisible(!albumInfoVisible)}/>
+        <img src="/images/AlbumArt.png" className="album-img" alt="Album Art" onClick={() => setAudioRequest(`Cryptid Crossing/Rose Tint?${Date.now()}`)}/>
       </div>
 
       <div className="tracks">

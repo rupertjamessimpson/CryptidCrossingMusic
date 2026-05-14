@@ -19,9 +19,11 @@ function About() {
       <br/>
 
       <p><b>Socials</b></p>
-      <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
-      <br/><br/>
-      <a href="https://www.instagram.com/cryptidcrossingmusic/">Instagram</a>
+      <div className="socials">
+        <a href="https://www.youtube.com/@CryptidCrossingMusic">YouTube</a>
+        <br/><br/>
+        <a href="https://www.instagram.com/cryptidcrossingmusic/">Instagram</a>
+      </div>
       <div className="bottom-padding"/>
     </div>
   );
